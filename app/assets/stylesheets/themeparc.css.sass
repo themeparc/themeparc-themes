@@ -20,12 +20,12 @@
     a
       color: $blue
 
-#pitch
-  p
-    font-size: 1.2em
-    text-align: center
+#product-featured
+  overflow: hidden
+  margin-bottom: 4em
 #products
-  text-align: center
+  .product
+    text-align: center
 
 #product-show
   .product-images
@@ -56,6 +56,7 @@ form
   input, textarea
     border: none
     border-radius: 0
+    padding: 0.5em 1em
 
 .tp-btn
   background: $tan
@@ -65,8 +66,6 @@ form
 
 @media screen and (min-width: 979px)
   #header
-    .logo
-      background-size: 100%
     .menu-toggle
       display: none
     ul.nav
@@ -79,3 +78,5 @@ form
         display: inline
         a
           display: inline
+  #footer
+    text-align: left
