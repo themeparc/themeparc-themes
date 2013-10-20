@@ -1,0 +1,50 @@
+!!!
+%html
+  %head
+    %title Theme Parc
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"}
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  
+  %body
+    .container
+      
+      #header.row
+        .col-xs-6.col-md-6
+          %h1.logo.pull-left 
+            =link_to image_tag('themeparc_logo.png'), home_path
+        .col-xs-6.menu-toggle
+          %a.pull-right{href: "#"}
+            %i.icon-reorder
+        
+        %ul.nav.col-xs-12.col-md-6
+          %li= link_to 'Themes', home_path
+          %li= link_to 'Premium'
+          %li= link_to 'Blog'
+          %li= link_to 'Support'
+      
+      = yield
+
+    #footer
+      .container
+        .row
+          .col-xs-12.col-md-4
+            %h4 From the blog
+            %h5= link_to 'Improve Your Business Look'
+            %p This is an excerpt from the blog. An excerpt from the blog.
+            %p= link_to 'Read More ...'
+          .col-xs-12.col-md-4
+            %h4 Find us on
+            %a{:href => ""} 
+              %i.icon-facebook-sign.icon-3x
+            %a{:href => ""}
+              %i.icon-twitter-sign.icon-3x
+            %a{:href => ""}
+              %i.icon-google-plus-sign.icon-3x
+          .col-xs-12.col-md-4
+            %h4 Connect for updates
+            %form#subscribe
+              %input.col-sm-12{type: "text", placeholder: "Email"}/ 
+              %input.tp-btn{type: "submit", value: "Subscribe"}
+

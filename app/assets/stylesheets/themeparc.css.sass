@@ -1,0 +1,83 @@
+
+
+#header
+  border-bottom: 3px double #f1f1f1
+  margin-bottom: 1em
+  .branding
+    overflow: hidden
+  .logo img
+    width: 40%
+  ul.nav
+    display: none
+    border-top: 3px double #f1f1f1
+    clear: both
+    & > li > a:hover
+      background: none
+    
+  .menu-toggle
+    overflow: hidden
+    line-height: 4em
+    a
+      color: $blue
+
+#product-featured
+  overflow: hidden
+  margin-bottom: 4em
+#products
+  .product
+    text-align: center
+
+#product-show
+  .product-images
+    text-align: center
+    img
+      margin-bottom: 1em
+  .description
+
+#footer
+  background: $blue
+  margin-top: 2em
+  padding: 2em 0
+  text-align: center
+  .col-sm-12
+    margin-bottom: 1em
+  h4
+    color: $white
+  h5
+    color: $white
+  p
+    color: $white
+  a
+    color: $orange
+  #subscribe input
+    margin-bottom: 0.5em
+
+form
+  input, textarea
+    border: none
+    border-radius: 0
+    padding: 0.5em 1em
+
+.tp-btn
+  background: $tan
+  border: none
+  box-shadow: 2px 2px 0 $tan - 20
+  padding: 0.5em 1em
+  margin-bottom: 1em
+
+@media screen and (min-width: 979px)
+  #header
+    .menu-toggle
+      display: none
+    ul.nav
+      display: block
+      margin-top: -3em
+      border-top: none
+      float: right
+      text-align: right
+      li
+        display: inline
+        a
+          display: inline
+  #footer
+    text-align: left
